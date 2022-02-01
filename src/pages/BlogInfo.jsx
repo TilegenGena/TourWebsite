@@ -7,7 +7,7 @@ import {
   Typography,
 } from "@mui/material";
 import { ClientContext } from "../context/ClientProvider";
-import Comment from "../components/comments/Comment";
+import CommentsExample from "../components/CommentExample";
 
 const BlogInfo = () => {
   const params = useParams();
@@ -40,9 +40,9 @@ const BlogInfo = () => {
               {info.price}
             </Typography>
           </CardContent>
-          
+          <CommentsExample />
         </Card>
-          <Comment />
+          
       </div>
     </div>
   );

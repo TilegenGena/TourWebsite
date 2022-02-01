@@ -1,6 +1,5 @@
 import axios from 'axios';
 import React, { useReducer } from 'react';
-import { toast } from 'react-toastify';
 import { API } from '../helpers/const'
 
 
@@ -22,7 +21,7 @@ const AdminProvider = (props) => {
 
     const addBlog = async (newBlog) =>{
         try{
-            await axios.post(API, {...newBlog, price: +newBlog.price, comments: []})
+            await axios.post(API, {...newBlog, price: +newBlog.price})
         }catch (error) {
             console.log(error);
         }
